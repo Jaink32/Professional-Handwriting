@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Handwriting Services - Quality notes, assignments, and practical files written neatly. ₹8 per page. Exam-friendly handwriting with zero spelling errors.">
+    <meta name="keywords" content="handwriting services, notes writing, assignments, practical files, student services, India">
+    <title>Professional Handwriting Services - Neat & Exam-Friendly Writing</title>
+    
+    <style>
+        /* ========================================
+           RESET & BASE STYLES
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #3a2f2a;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede8e3 50%, #e8dfd6 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Paper texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(139, 121, 93, 0.02) 0px,
+                    rgba(139, 121, 93, 0.02) 1px,
+                    transparent 1px,
+                    transparent 2px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ensure anchored sections stop below the fixed header */
+        [id] {
+            scroll-margin-top: 88px;
+        }
+
+        /* ========================================
+           TYPOGRAPHY
+           ======================================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            color: #2a2420;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #d4a574;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #a8805e;
+        }
+
+        /* ========================================
+           HEADER & NAVIGATION
+           ======================================== */
+        header {
+            background: linear-gradient(135deg, #f9f6f1 0%, #f5f1eb 100%);
+            padding: 1.2rem 2rem;
+            box-shadow: 0 2px 8px rgba(139, 121, 93, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #d4a574;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #8b795d;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            color: #5a5047;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4a574;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ede8e3 0%, #f5f1eb 50%, #f9f6f1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '✏️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -30px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '📓';
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.05;
+            bottom: 20px;
+            left: -40px;
+            animation: float 8s ease-in-out infinite 1s;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-headline-hi {
+            font-size: 1.8rem;
+            color: #8b795d;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            color: #2a2420;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            word-spacing: 0.1em;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: #6b5f56;
+            margin-bottom: 2rem;
+            font-style: italic;
+            animation: fadeIn 1s ease-out 0.3s backwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #5a5047;
+            margin-bottom: 2.5rem;
+            animation: fadeIn 1s ease-out 0.5s backwards;
+        }
+
+        .price-badge {
+            display: inline-block;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a574 0%, #c49565 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* ========================================
+           SERVICES SECTION
+           ======================================== */
+        .services {
+            padding: 4rem 2rem;
+            background: #f9f6f1;
+            max-width: 1200px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(139, 121, 93, 0.15);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2a2420;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #d4a574;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fefdfb 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(139, 121, 93, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #d4a574;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(139, 121, 93, 0.2);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #2a2420;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #6b5f56;
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           WHY CHOOSE US SECTION
+           ======================================== */
+        .why-us {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .why-us-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fefdfb 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(139, 121, 93, 0.12);
+            border-left: 5px solid #d4a574;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .why-us-card::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 165, 116, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-us-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 20px rgba(139, 121, 93, 0.2);
+        }
+
+        .why-us-card h3 {
+            font-size: 1.2rem;
+            color: #2a2420;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .why-us-card p {
+            color: #6b5f56;
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           OFFER BANNER
+           ======================================== */
+        .offer-banner {
+            background: linear-gradient(135deg, #d4a574 0%, #c49565 50%, #b08755 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem auto;
+            max-width: 1200px;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(212, 165, 116, 0.25);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .offer-banner::before {
+            content: '⭐';
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            top: -40px;
+            right: 30px;
+            animation: rotate 20s linear infinite;
+        }
+
+        .offer-banner::after {
+            content: '⭐';
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.08;
+            bottom: -20px;
+            left: 50px;
+            animation: rotate 25s linear infinite reverse;
+        }
+
+        .offer-banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .offer-banner h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .offer-banner p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 10px 35px rgba(212, 165, 116, 0.25);
+            }
+            50% {
+                box-shadow: 0 15px 45px rgba(212, 165, 116, 0.35);
+            }
+        }
+
+        /* ========================================
+           WHATSAPP CTA SECTION
+           ======================================== */
+        .whatsapp-cta {
+            background: linear-gradient(135deg, #25d366 0%, #20c35f 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .whatsapp-content {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .whatsapp-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .whatsapp-cta h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: white;
+            color: #25d366;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .whatsapp-button:active {
+            transform: translateY(-1px);
+        }
+
+        .phone-display {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .facility-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        footer {
+            background: #2a2420;
+            color: #d4a574;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #d4a574;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f5f1eb;
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+           ======================================== */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-headline-hi {
+                font-size: 1.3rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+
+            .price-badge {
+                width: 140px;
+                height: 140px;
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .price-amount {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .services {
+                padding: 2.5rem 1.5rem;
+                margin: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .why-us {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .offer-banner {
+                padding: 2rem 1.5rem;
+                margin: 2rem 1.5rem;
+            }
+
+            .offer-banner h2 {
+                font-size: 1.6rem;
+            }
+
+            .offer-banner p {
+                font-size: 0.95rem;
+            }
+
+            .whatsapp-cta {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .whatsapp-icon {
+                font-size: 3rem;
+            }
+
+            .whatsapp-cta h2 {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-cta p {
+                font-size: 0.95rem;
+            }
+
+            .whatsapp-button {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
+            }
+
+            .phone-display {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-headline-hi {
+                font-size: 1.1rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .price-badge {
+                width: 120px;
+                height: 120px;
+                font-size: 0.8rem;
+            }
+
+            .price-amount {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+            }
+
+            .offer-banner h2 {
+                font-size: 1.3rem;
+            }
+
+            .whatsapp-icon {
+                font-size: 2.5rem;
+            }
+
+            .whatsapp-cta h2 {
+                font-size: 1.3rem;
+            }
+
+            nav a {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========================================
+           ACCESSIBILITY
+           ======================================== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus states for keyboard navigation */
+        button:focus,
+        a:focus {
+            outline: 2px solid #d4a574;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">✍️</span>
+                <span><a href="#">Professional Handwriting</a></span>
+            </div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#offer">Offer</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline-hi">छोड़िये लिखने की चिंता</h1>
+            <h2 class="hero-title">PROFESSIONAL HANDWRITING SERVICES</h2>
+            <p class="hero-tagline">आपका कंटेंट, हमारी सुंदर लिखावट</p>
+            <p class="hero-subtitle">Clear, Neat & Exam-Friendly Handwriting</p>
+            
+            <div class="price-badge">
+                <span class="price-amount">₹8</span>
+                <span>Per Page</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">📚</span>
+                <h3>School & College Notes</h3>
+                <p>Beautifully written notes from any subject — organized, clear, and exam-ready.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📝</span>
+                <h3>Assignments & Projects</h3>
+                <p>Complete your assignments with neat handwriting, proper formatting, and zero errors.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🔬</span>
+                <h3>Practical Files & Lab Manuals</h3>
+                <p>Professional practical files with diagrams, observations, and neat handwritten content.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">✏️</span>
+                <h3>Homework Completion</h3>
+                <p>Get your homework done neatly and on time, meeting all guidelines and requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="why-us-grid">
+            <div class="why-us-card">
+                <h3>✓ Clear Spacing</h3>
+                <p>Perfect margins and spacing between lines and paragraphs for maximum readability.</p>
+            </div>
+            <div class="why-us-card">
+                <h3>✓ Zero Spelling Errors</h3>
+                <p>Every word is checked and verified. No spelling or grammatical mistakes.</p>
+            </div>
+            <div class="why-us-card">
+                <h3>✓ Customized as per Your Need</h3>
+                <p>Whether it's font style, paper size, or content layout — we customize everything for you.</p>
+            </div>
+            <div class="why-us-card">
+                <h3>✓ Neat & Exam-Friendly Handwriting</h3>
+                <p>Clean, legible handwriting specifically designed to score maximum marks in exams.</p>
+            </div>
+            <div class="why-us-card">
+                <h3>✓ On-Time Delivery</h3>
+                <p>We respect your deadlines. Orders delivered on or before the promised date.</p>
+            </div>
+            <div class="why-us-card">
+                <h3>✓ Sample Available on Request</h3>
+                <p>Not sure? Request a free sample before placing a full order. See quality first.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Banner -->
+    <section class="offer-banner" id="offer">
+        <div class="offer-banner-content">
+            <h2>🎁 Special Offer 🎁</h2>
+            <p>10% Extra Discount on 100+ Pages</p>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta" id="contact">
+        <div class="whatsapp-content">
+            <div class="whatsapp-icon">💬</div>
+            <h2>Order Now on WhatsApp</h2>
+            <p>Connect with us instantly to place your order, ask questions, or request a sample.</p>
+            
+            <a href="https://wa.me/916397086504?text=Hello%20Professional%20Handwriting%20Services%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20pricing%20and%20samples." 
+               class="whatsapp-button"
+               target="_blank" 
+               rel="noopener noreferrer">
+                📲 Chat on WhatsApp
+            </a>
+            
+            <div class="phone-display">
+                📞 6397086504
+            </div>
+            <p class="facility-text">Walk-in & Collect Facility Available</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Professional Handwriting Services. All rights reserved.</p>
+        <p>Quality Handwriting | Student-Friendly | Exam-Focused</p>
+        <div class="footer-links">
+            <a href="#services">Services</a> | 
+            <a href="#why-us">Why Us</a> | 
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Minimal JavaScript for enhancements -->
+    <script>
+        // Smooth scroll for navigation links with sticky header offset
+        (function(){
+            const header = document.querySelector('header');
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+                    const target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+                    const offset = 12; // small spacing from header
+                    const targetY = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - offset;
+                    window.scrollTo({ top: targetY, behavior: 'smooth' });
+                    // update URL hash without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, href);
+                    } else {
+                        location.hash = href;
+                    }
+                });
+            });
+        })();
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.service-card, .why-us-card, .offer-banner, .whatsapp-cta').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
