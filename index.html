@@ -590,6 +590,7 @@
             cursor: pointer;
             border: none;
             text-decoration: none;
+            margin: 0 0.8rem;
         }
 
         .whatsapp-button:hover {
@@ -599,6 +600,43 @@
 
         .whatsapp-button:active {
             transform: translateY(-1px);
+        }
+
+        /* Call Button Styles */
+        .call-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            margin: 0 0.8rem;
+        }
+
+        .call-button:hover {
+            background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .call-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Contact buttons wrapper */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .phone-display {
@@ -645,6 +683,318 @@
 
         .footer-links a:hover {
             color: #f5f1eb;
+        }
+
+        /* ========================================
+           HANDWRITING WORK SAMPLES SECTION
+           ======================================== */
+        .samples-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: #f9f6f1;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(139, 121, 93, 0.15);
+        }
+
+        .samples-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2a2420;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .samples-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #d4a574;
+            border-radius: 2px;
+        }
+
+        /* Gallery Container */
+        .gallery-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #ffffff;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Gallery Scroll Buttons */
+        .gallery-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #d4a574 0%, #c49565 100%);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .gallery-button:hover:not(:disabled) {
+            background: linear-gradient(135deg, #c49565 0%, #b08755 100%);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 18px rgba(212, 165, 116, 0.4);
+        }
+
+        .gallery-button:active:not(:disabled) {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .gallery-button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            box-shadow: 0 2px 6px rgba(212, 165, 116, 0.15);
+        }
+
+        .gallery-button.left {
+            left: 10px;
+        }
+
+        .gallery-button.right {
+            right: 10px;
+        }
+
+        /* Custom scroll indicator (bottom) */
+        .scroll-indicator {
+            height: 4px;
+            background: linear-gradient(90deg, #d4a574 0%, #c49565 50%, #b08755 100%);
+            border-radius: 2px;
+            margin-top: 12px;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-wrapper:hover .scroll-indicator {
+            opacity: 0.6;
+        }
+
+        /* Gallery Cards */
+        .sample-card {
+            flex: 0 0 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(139, 121, 93, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            background: #ffffff;
+            border: 1px solid rgba(212, 165, 116, 0.1);
+        }
+
+        .sample-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(139, 121, 93, 0.2);
+        }
+
+        .sample-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .sample-card:hover .sample-card-image {
+            transform: scale(1.05);
+        }
+
+        .sample-card-content {
+            padding: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #fefdfb 100%);
+        }
+
+        .sample-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2a2420;
+            margin-bottom: 0.3rem;
+        }
+
+        .sample-card-desc {
+            font-size: 0.85rem;
+            color: #6b5f56;
+            margin: 0;
+        }
+
+        /* Gallery hint text */
+        .gallery-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8b795d;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+
+        /* ========================================
+           MODAL / POPUP STYLES
+           ======================================== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: modalZoom 0.3s ease-out;
+        }
+
+        @keyframes modalZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 1001;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .modal-info {
+            padding: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            color: #2a2420;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-desc {
+            color: #6b5f56;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ========================================
+           SCROLL-TO-TOP BUTTON
+           ======================================== */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #d4a574 0%, #c49565 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-to-top.active {
+            display: flex;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-to-top:hover {
+            background: linear-gradient(135deg, #c49565 0%, #b08755 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(212, 165, 116, 0.4);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-2px);
         }
 
         /* ========================================
@@ -764,6 +1114,34 @@
             .phone-display {
                 font-size: 1.1rem;
             }
+
+            /* Gallery responsive */
+            .samples-section {
+                padding: 2.5rem 1.5rem;
+                margin: 1.5rem;
+            }
+
+            .samples-title {
+                font-size: 1.5rem;
+            }
+
+            .sample-card {
+                flex: 0 0 240px;
+            }
+
+            .gallery-scroll {
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            /* Scroll-to-top responsive */
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -822,6 +1200,51 @@
                 margin-right: 0.5rem;
                 font-size: 0.8rem;
             }
+
+            /* Gallery responsive mobile */
+            .samples-section {
+                padding: 2rem 1rem;
+                margin: 1rem;
+            }
+
+            .samples-title {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+
+            .sample-card {
+                flex: 0 0 200px;
+            }
+
+            .sample-card-title {
+                font-size: 0.9rem;
+            }
+
+            .gallery-hint {
+                font-size: 0.8rem;
+            }
+
+            /* Modal responsive */
+            .modal-content {
+                border-radius: 12px;
+            }
+
+            .modal-title {
+                font-size: 1.1rem;
+            }
+
+            .modal-desc {
+                font-size: 0.85rem;
+            }
+
+            /* Scroll-to-top responsive */
+            .scroll-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
         }
 
         /* ========================================
@@ -859,6 +1282,7 @@
                 <a href="#services">Services</a>
                 <a href="#why-us">Why Us</a>
                 <a href="#offer">Offer</a>
+                <a href="#samples">Samples</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -945,19 +1369,195 @@
         </div>
     </section>
 
-    <!-- WhatsApp CTA Section -->
+    <!-- Handwriting Work Samples Section -->
+    <section class="samples-section" id="samples">
+        <h2 class="samples-title">Handwriting Work Samples</h2>
+        
+        <div class="gallery-wrapper">
+            <button class="gallery-button left" id="scrollLeft" title="Scroll left">‹</button>
+            <div class="gallery-scroll" id="galleryScroll">
+                <!-- Sample Card 1 -->
+                <div class="sample-card" data-modal-id="sample-1">
+                    <img src="images/1.jpeg" alt="Table of Contents with organized index" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Table of Contents</h3>
+                        <p class="sample-card-desc">Organized index with proper numbering</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 2 -->
+                <div class="sample-card" data-modal-id="sample-2">
+                    <img src="images/2.jpeg" alt="Certificate with formal handwriting" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Certificate</h3>
+                        <p class="sample-card-desc">Formal & professional formatting</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 3 -->
+                <div class="sample-card" data-modal-id="sample-3">
+                    <img src="images/3.jpeg" alt="Poetry assignment - My Mother at Sixty Six" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Poetry Assignment</h3>
+                        <p class="sample-card-desc">Beautiful handwriting for literature</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 4 -->
+                <div class="sample-card" data-modal-id="sample-4">
+                    <img src="images/4.jpeg" alt="Summary and analysis of poem" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Summary & Analysis</h3>
+                        <p class="sample-card-desc">Concise & neatly organized content</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 5 -->
+                <div class="sample-card" data-modal-id="sample-5">
+                    <img src="images/5.jpeg" alt="Vocabulary with definitions and examples" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Vocabulary Meanings</h3>
+                        <p class="sample-card-desc">Clear definitions with examples</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 6 -->
+                <div class="sample-card" data-modal-id="sample-6">
+                    <img src="images/6.jpeg" alt="Bibliography with reference links" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Bibliography</h3>
+                        <p class="sample-card-desc">Properly formatted references</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 7 -->
+                <div class="sample-card" data-modal-id="sample-7">
+                    <img src="images/7.jpeg" alt="Key points and analysis notes" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Key Points</h3>
+                        <p class="sample-card-desc">Important insights & analysis</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 8 -->
+                <div class="sample-card" data-modal-id="sample-8">
+                    <img src="images/8.jpeg" alt="Grammar and literature exercise" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Grammar Exercise</h3>
+                        <p class="sample-card-desc">Language & literature work</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 9 -->
+                <div class="sample-card" data-modal-id="sample-9">
+                    <img src="images/9.jpeg" alt="English notes and comprehension" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">English Notes</h3>
+                        <p class="sample-card-desc">Comprehensive study material</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 10 -->
+                <div class="sample-card" data-modal-id="sample-10">
+                    <img src="images/10.jpeg" alt="Science practical and observations" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Science Practical</h3>
+                        <p class="sample-card-desc">Detailed observations & results</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 11 -->
+                <div class="sample-card" data-modal-id="sample-11">
+                    <img src="images/11.jpeg" alt="History notes and timelines" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">History Notes</h3>
+                        <p class="sample-card-desc">Well-structured historical content</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 12 -->
+                <div class="sample-card" data-modal-id="sample-12">
+                    <img src="images/12.jpeg" alt="Mathematics solutions and problems" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Mathematics Solutions</h3>
+                        <p class="sample-card-desc">Clear equations & step-by-step working</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 13 -->
+                <div class="sample-card" data-modal-id="sample-13">
+                    <img src="images/13.jpeg" alt="Project assignment and research work" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Project Assignment</h3>
+                        <p class="sample-card-desc">Research work with proper formatting</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 9 -->
+                <!-- <div class="sample-card" data-modal-id="sample-9">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop" alt="Professional handwritten poem sample 9" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Poetry Analysis</h3>
+                        <p class="sample-card-desc">Beautiful handwriting for literature</p>
+                    </div>
+                </div> -->
+
+                <!-- Sample Card 10 -->
+                <!-- <div class="sample-card" data-modal-id="sample-10">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=300&fit=crop" alt="Professional handwritten summary sample 10" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Summary & Overview</h3>
+                        <p class="sample-card-desc">Concise & neatly written content</p>
+                    </div>
+                </div> -->
+
+                <!-- Sample Card 11 -->
+                <!-- <div class="sample-card" data-modal-id="sample-11">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop" alt="Professional handwritten vocabulary sample 11" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Vocabulary & Meanings</h3>
+                        <p class="sample-card-desc">Clear definitions with examples</p>
+                    </div>
+                </div> -->
+
+                <!-- Sample Card 12 -->
+                <!-- <div class="sample-card" data-modal-id="sample-12">
+                    <img src="https://images.unsplash.com/photo-1507842957670-4873dced4d76?w=400&h=300&fit=crop" alt="Professional handwritten key points sample 12" class="sample-card-image">
+                    <div class="sample-card-content">
+                        <h3 class="sample-card-title">Key Points & Notes</h3>
+                        <p class="sample-card-desc">Well-organized study material</p>
+                    </div>
+                </div> -->
+            </div>
+            <button class="gallery-button right" id="scrollRight" title="Scroll right">›</button>
+            <div class="scroll-indicator"></div>
+        </div>
+
+        <p class="gallery-hint">👆 Scroll horizontally to see more samples • Click any image to view in full size</p>
+    </section>
+
+    <!-- Contact Section -->
     <section class="whatsapp-cta" id="contact">
         <div class="whatsapp-content">
-            <div class="whatsapp-icon">💬</div>
-            <h2>Order Now on WhatsApp</h2>
-            <p>Connect with us instantly to place your order, ask questions, or request a sample.</p>
+            <div class="whatsapp-icon">📞</div>
+            <h2>Get in Touch With Us</h2>
+            <p>Choose your preferred way to contact us. We're here to help with your handwriting needs!</p>
             
-            <a href="https://wa.me/916397086504?text=Hello%20Professional%20Handwriting%20Services%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20pricing%20and%20samples." 
-               class="whatsapp-button"
-               target="_blank" 
-               rel="noopener noreferrer">
-                📲 Chat on WhatsApp
-            </a>
+            <div class="contact-buttons">
+                <a href="tel:+916397086504" 
+                   class="call-button"
+                   title="Call us directly">
+                    ☎️ Call Now
+                </a>
+
+                <a href="https://wa.me/916397086504?text=Hello%20Professional%20Handwriting%20Services%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20pricing%20and%20samples." 
+                   class="whatsapp-button"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Chat on WhatsApp">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
             
             <div class="phone-display">
                 📞 6397086504
@@ -965,6 +1565,23 @@
             <p class="facility-text">Walk-in & Collect Facility Available</p>
         </div>
     </section>
+
+    <!-- Modal Popup -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="Full size handwriting sample" class="modal-image">
+            <div class="modal-info">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-desc" id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" title="Scroll to top">
+        ↑
+    </button>
 
     <!-- Footer -->
     <footer>
@@ -1025,6 +1642,208 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // ========================================
+        // MODAL POPUP FUNCTIONALITY
+        // ========================================
+        document.addEventListener('DOMContentLoaded', function(){
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalClose = document.getElementById('modalClose');
+
+            // Sample data for each card
+            const sampleData = {
+                'sample-1': {
+                    img: 'images/1.jpeg',
+                    title: 'Table of Contents',
+                    desc: 'Organized table of contents with clear numbering, proper formatting, and easy navigation through all sections and page references.'
+                },
+                'sample-2': {
+                    img: 'images/2.jpeg',
+                    title: 'Certificate',
+                    desc: 'Formal certificate with elegant handwriting, proper spacing, and professional formatting. Perfect for official documents and submissions.'
+                },
+                'sample-3': {
+                    img: 'images/3.jpeg',
+                    title: 'Poetry Assignment',
+                    desc: 'Beautiful handwritten poetry assignment with neat presentation of literary work, proper line breaks, and excellent readability.'
+                },
+                'sample-4': {
+                    img: 'images/4.jpeg',
+                    title: 'Summary & Analysis',
+                    desc: 'Concise and well-organized summary with detailed analysis, proper headings, and clear explanation of key concepts.'
+                },
+                'sample-5': {
+                    img: 'images/5.jpeg',
+                    title: 'Vocabulary Meanings',
+                    desc: 'Clear vocabulary definitions with examples, properly formatted in tabular layout, perfect for language learning and reference.'
+                },
+                'sample-6': {
+                    img: 'images/6.jpeg',
+                    title: 'Bibliography',
+                    desc: 'Properly formatted bibliography with all reference links, websites, and sources neatly listed according to academic standards.'
+                },
+                'sample-7': {
+                    img: 'images/7.jpeg',
+                    title: 'Key Points',
+                    desc: 'Important key points and insights extracted from the poem, with clear numbering, proper spacing, and easy revision format.'
+                },
+                'sample-8': {
+                    img: 'images/8.jpeg',
+                    title: 'Grammar Exercise',
+                    desc: 'Language and literature exercise with grammatical annotations, clear explanations, and proper sentence structure demonstrations.'
+                },
+                'sample-9': {
+                    img: 'images/9.jpeg',
+                    title: 'English Notes',
+                    desc: 'Comprehensive English study material with well-organized notes, comprehension passages, and clear explanations of literary concepts.'
+                },
+                'sample-10': {
+                    img: 'images/10.jpeg',
+                    title: 'Science Practical',
+                    desc: 'Detailed science practical with observations, results, and proper documentation following lab report format and guidelines.'
+                },
+                'sample-11': {
+                    img: 'images/11.jpeg',
+                    title: 'History Notes',
+                    desc: 'Well-structured history notes with timelines, events, proper divisions, and comprehensive coverage of historical periods.'
+                },
+                'sample-12': {
+                    img: 'images/12.jpeg',
+                    title: 'Mathematics Solutions',
+                    desc: 'Clear mathematical solutions with proper equations, step-by-step working, and neat formatting for easy understanding and revision.'
+                },
+                'sample-13': {
+                    img: 'images/13.jpeg',
+                    title: 'Project Assignment',
+                    desc: 'Professional project assignment with research work, proper formatting, citations, and well-organized presentation of findings.'
+                }
+            };
+
+            // Open modal on card click
+            const cards = document.querySelectorAll('.sample-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function(){
+                    const sampleId = this.getAttribute('data-modal-id');
+                    const data = sampleData[sampleId];
+                    if(data){
+                        modalImage.src = data.img;
+                        modalImage.alt = data.title + ' - handwriting sample';
+                        modalTitle.textContent = data.title;
+                        modalDesc.textContent = data.desc;
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Close modal on close button
+            if(modalClose){
+                modalClose.addEventListener('click', function(){
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+
+            // Close modal on outside click (on overlay)
+            modal.addEventListener('click', function(e){
+                if(e.target === modal){
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal on ESC key
+            document.addEventListener('keydown', function(e){
+                if(e.key === 'Escape' && modal.classList.contains('active')){
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // ========================================
+        // GALLERY SCROLL BUTTONS FUNCTIONALITY
+        // ========================================
+        (function(){
+            const galleryScroll = document.getElementById('galleryScroll');
+            const scrollLeftBtn = document.getElementById('scrollLeft');
+            const scrollRightBtn = document.getElementById('scrollRight');
+            const scrollAmount = 300; // pixels to scroll
+
+            // Function to update button states based on scroll position
+            function updateButtonStates() {
+                // Check if at start
+                if (galleryScroll.scrollLeft <= 0) {
+                    scrollLeftBtn.disabled = true;
+                } else {
+                    scrollLeftBtn.disabled = false;
+                }
+
+                // Check if at end
+                const isAtEnd = galleryScroll.scrollLeft >= (galleryScroll.scrollWidth - galleryScroll.clientWidth - 10);
+                if (isAtEnd) {
+                    scrollRightBtn.disabled = true;
+                } else {
+                    scrollRightBtn.disabled = false;
+                }
+            }
+
+            // Initial state check
+            updateButtonStates();
+
+            // Update on scroll
+            galleryScroll.addEventListener('scroll', updateButtonStates);
+
+            // Scroll left button
+            scrollLeftBtn.addEventListener('click', function(){
+                galleryScroll.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+                // Update states after scroll
+                setTimeout(updateButtonStates, 600);
+            });
+
+            // Scroll right button
+            scrollRightBtn.addEventListener('click', function(){
+                galleryScroll.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+                // Update states after scroll
+                setTimeout(updateButtonStates, 600);
+            });
+
+            // Also update on window resize
+            window.addEventListener('resize', updateButtonStates);
+        })();
+
+        // ========================================
+        // SCROLL-TO-TOP BUTTON FUNCTIONALITY
+        // ========================================
+        (function(){
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function(){
+                if(window.pageYOffset > 300){
+                    scrollBtn.classList.add('active');
+                } else {
+                    scrollBtn.classList.remove('active');
+                }
+            });
+
+            // Smooth scroll to top on click
+            scrollBtn.addEventListener('click', function(){
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
     </script>
 </body>
 </html>
